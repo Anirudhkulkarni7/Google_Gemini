@@ -1,0 +1,82 @@
+/* main side bar sati css te sagla side ghyala */
+.sidebar{
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 25px 15px;
+}
+
+/* sab images k width kam kiya */
+.sidebar img{
+    width: 20px;        
+}
+
+
+/* sidebar me ka menu icon [1st img] ko pointer diya and block kiya */
+.sidebar .menu{
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* new chat k name se jo icon he usko style kiya  */
+.sidebar .new-chat{
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    /* color: grey; */
+    cursor: pointer;
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+/* new chat se isko upar neeche gap diya */
+.sidebar .recent-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* recent-entry class me ek img and p he usko style kiye */
+.sidebar .recent-entry{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    /* color: #282828; */
+    cursor: pointer;
+
+}
+ 
+
+.sidebar .bottom {
+    display: flex ;
+    flex-direction: column;
+
+}
+
+.sidebar .bottom-item{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:600){
+    .sidebar{
+        display: none;
+    }
+
+}

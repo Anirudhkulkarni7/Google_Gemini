@@ -1,0 +1,247 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+
+/* main madla naav duur karala he use kelo */
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+
+}
+
+/* image round ani chota kelo */
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+/* main container me jo bhi he text and images un sab ko center liya */
+.main-container{
+    max-width: 900px;
+    margin: auto;
+ }
+
+
+ /* Hello aniruddh how can i help you jo he usko light karka bada kiya */
+ .main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+
+ }
+
+
+ /* greet made "hello use je ahe tela color ghatlo" */
+ .main .greet span{
+    background: -webkit-linear-gradient(16deg ,#4b90ff , #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+ }
+
+
+ /* sagle je cards ahet[4] tena side by side kelo grid na ani gap delo and padding pan */
+ .main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+
+ }
+
+
+ /* sagla cards la background box dilo varcha sagle content hejyat ale */
+ .main .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+ }
+
+
+ /* te sagle card madla images la box made khali ekdum bottom la ghtlo ani lhan kelo */
+ .main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+
+ }
+
+
+ /* tya card madla txt la bgcolor diun size dilo */
+ .main .card p{
+    color: #585858;
+    font-size: 17px;
+
+ }
+
+
+ /* card var hover kelya var he color yenya sati */
+ .main .card:hover{
+    background-color: #dfe4df;
+ }  
+
+
+/* main bottom je ahe tejya styling [searchbox ani icon,text cha] */
+ .main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+
+ }
+
+
+ .search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+ }
+
+ .search-box img{
+    width: 24px;
+    cursor: pointer;
+ }
+
+  .search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+
+  }
+
+
+  /* div madle 3 images la gap dyala liloy */
+   .search-box div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   }
+
+
+/* ekdum khalcha text la center la ghtlo */
+   .main .bottom-info{
+        font-size: 13px;
+        margin: 15px auto;
+        text-align: center;
+        font-weight:400;
+
+   }
+
+
+
+   /* je output yetay tejya styling */
+   .result{
+      padding: 0px 5% ;
+      max-height: 70vh;
+      overflow-y: scroll;
+   }
+
+   .result::-webkit-scrollbar{
+      display: none;
+   }
+
+/* result madla image ani question la gap dyala use kelo */
+   .result-title{
+      margin: 40px 0px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+   }
+
+   .result img{
+      width: 40px;
+      border-radius: 50%;
+   }
+
+
+   /* result data maddla icon ani text sidebyside yayla kelo */
+   .result-data{
+      display: flex;
+      align-items: start;
+      gap: 20px;
+   }
+
+   .loader{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .loader hr{
+      border-radius: 4px;
+      border: none;
+      background-color: #f6f7f8;
+      background: linear-gradient(to right, #9ed7ff, #ffffff,#9ed7ff);
+      background-size: 800px 50px;
+      height: 20px;
+      animation: loader 3s infinite linear;
+
+   }
+
+/* 3 hr je load huylet tela animate karala ani hech var pan use keloy */
+   @keyframes loader{
+      0%{
+         background-position: -800px 0px;
+
+      }
+
+      100%{
+         background-position: 800px 0px;
+      }
+   }
+
+
+   /* output cha text[p]styling karala */
+   .result-data p{
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.8;
+   }
+
+   @media (max-width:600px){
+      .main-bottom input{
+         flex: none;
+         width: 150px;
+      }
+
+      .main-bottom img{
+         width: 20px;
+
+      }
+      .search-box {
+         padding: 50x 10px;
+      }
+
+      .search-box div{
+         gap: 5px;
+      }
+   }
